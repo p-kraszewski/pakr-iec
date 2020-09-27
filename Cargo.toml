@@ -1,0 +1,14 @@
+[package]
+name = "pakr-iec"
+version = "1.0.0"
+authors = ["Pawel Kraszewski <pawel@kraszewscy.net>"]
+description = "Functions to format numbers as decimal (1000 is 1.0k) and IEC (1024 is 1.0ki) up to YOTTA suffix."
+edition = "2018"
+license = "BSD-2-Clause"
+keywords = ["iec", "decimal", "number", "formatting"]
+categories = ["encoding", "mathematics", "value-formatting"]
+repository = "https://github.com/p-kraszewski/pakr-iec"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
