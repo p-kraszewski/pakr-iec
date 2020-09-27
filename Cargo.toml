@@ -1,6 +1,6 @@
 [package]
 name = "pakr-iec"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["Pawel Kraszewski <pawel@kraszewscy.net>"]
 description = "Functions to format numbers as decimal (1000 is 1.0k) and IEC (1024 is 1.0ki) up to YOTTA suffix."
 edition = "2018"

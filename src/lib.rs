@@ -1,3 +1,20 @@
+//! Functions to format numbers as decimal (1000 is 1.0k) and IEC (1024 is 1.0ki) up to YOTTA
+//! suffix.
+//!
+//! # Example
+//!
+//! ```
+//! use pakr_iec::*;
+//! assert_eq!("1.0", decimal(1));
+//! assert_eq!("1.0", iec(1));
+//! assert_eq!("1.0k", decimal(1000));
+//! assert_eq!("1.0ki", iec(1024));
+//! assert_eq!("10.0M", decimal(10_000_000));
+//! assert_eq!("10.0Mi", iec(10 * 1024 * 1024));
+//! assert_eq!("1.0Y", decimal(1_000_000_000_000_000_000_000_000_u128));
+//! assert_eq!("1.0Yi", iec(1_208_925_819_614_629_174_706_176_u128));
+//! ```
+
 /// Format value as decimal multipliers (that is in 1000 increments) with one decimal place.
 pub fn decimal(val: u128) -> String {
     const MULTS: [&str; 9] = ["", "k", "M", "G", "T", "P", "E", "Z", "Y"];
